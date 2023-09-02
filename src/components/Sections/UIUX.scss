@@ -1,0 +1,95 @@
+.ai-ux-dev-container {
+    display: flex;
+    flex-wrap: wrap;  // Allow wrapping to the next row
+    justify-content: space-between;
+    padding: 0 8rem 20rem 8rem;
+    box-sizing: border-box;
+    gap: 3rem;  // Space between rows
+}
+
+.project-link {
+    text-decoration: none; // Removes the default underline for anchor tags
+    color: inherit; // Ensures the text color remains consistent
+    display: flex; // Makes the entire project box clickable
+    flex: 0 0 calc(33.333% - 2rem);  // Each link will take up 33.333% of the width minus the gap
+    height: 160px;
+    box-sizing: border-box;
+}
+
+.project-box {
+    width: 100%;  // Ensure the project box fills the entire width of the link
+    height: 100%;  // Ensure the project box fills the entire height of the link
+    border-radius: 51px;
+    border: 1px solid #D9D9D9;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;  // Align horizontally to the left
+    align-items: flex-end;  // Align vertically to the bottom
+    text-align: left;
+    padding: 0.8rem;  // Padding to ensure the title doesn't touch the edges
+    flex-direction: column;
+}
+
+.project-image {
+    flex: 1; /* Make it take all available space */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 47px; /* adjusted to account for the border */
+    border-top-right-radius: 47px; /* adjusted to account for the border */
+    margin-bottom: 8px; /* Space between the image and the title */
+}
+
+
+.project-box h3 {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 8px; 
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .ai-ux-dev-container {
+        padding: 0 2rem 10rem 2rem;  // Reduced padding for tablets
+    }
+    .project-link {
+        flex: 0 0 calc(50% - 2rem);  // Two projects per row
+    }
+}
+
+/* For mobile */
+@media (max-width: 480px) {
+    .ai-ux-dev-container {
+        padding: 0 1rem 8rem 1rem;  // Reduced padding for mobile
+    }
+    .project-link {
+        flex: 0 0 100%;  // Each project takes the full width
+        margin-bottom: 1rem;  // Give some space between stacked projects
+    }
+}
+
+@keyframes rotateShake {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(2) rotate(-3deg); }
+    50% { transform: scale(2) rotate(3deg); }
+    75% { transform: scale(2) rotate(-3deg); }
+    100% { transform: scale(2) rotate(3deg); }
+}
+
+.project-box:hover {
+    animation: rotateShake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform-origin: center center;  // Ensures rotation is around the center
+    backface-visibility: hidden;
+    perspective: 1000px;
+    opacity: 90%;
+}
+
+.hover-animation {
+    animation: rotateShake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    opacity: 90%;
+}

@@ -1,0 +1,159 @@
+@import '../../src/App.scss';
+
+#introduction .icon-class {
+    width: 90px;
+    height: 90px;
+}
+
+#introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.moving-circle {
+    position: absolute;
+    background-color: #FDFBCA42;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    width: 80rem;
+    height: 80rem;
+    z-index: -1;  /* This will place the circle behind other content */
+    transform: translate(-50%, -5%);  /* This will center the circle around the mouse pointer */
+    transition: all 0.05s ease-in-out;
+    @media (max-width : 768px) {
+        width: 50rem;
+        height: 50rem;
+    }
+
+    @media (max-width : 508px) {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    @media (max-width : 308px) {
+        width: 20rem;
+        height: 20rem;
+    }
+        
+}
+
+#introduction ul {
+    list-style-type: none;
+    padding: 90px 10px 10px 0px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+#introduction ul li {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#introduction ul li .icon-wrapper {
+    display: flex;
+    align-items: center;
+    color: #423E24;
+}
+
+#introduction ul li .text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 330px) {
+        display: none;
+    }
+}
+
+#introduction ul li a {
+    text-decoration: none;
+    font-size: 2.8rem;
+    color: #423E24;;
+    padding: 10px 20px 15px 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#introduction ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #FDF300;
+    visibility: hidden;
+    transition: all 0.15s ease-in-out;
+}
+
+#introduction ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+#introduction ul li:nth-child(2),
+#introduction ul li:nth-child(3) {
+    margin-top: -8rem;  /* Adjust this value based on how much higher you want them to move */
+}
+
+@media (max-width: 1200px)  {
+    #introduction ul li a {
+        font-size: 2rem;
+        padding: 20px 0 0 0;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 968px) {
+
+    #introduction ul li .icon-wrapper {
+        margin: 0 auto;  /* Center the icons */
+    }
+
+    #introduction ul li {
+        margin: 0 10px;
+    }
+
+    #introduction ul li .icon-class {
+        width: 50px;  
+        height: 50px;  
+    }
+}
+
+@media (max-width: 520px) {
+    #introduction ul li a {
+        font-size: 1.6rem;
+        padding: 20px 0 0 0;
+    }
+
+    #introduction ul{
+        padding: 100px 0px 0px 0px;
+    }
+
+    #introduction ul li {
+        margin: 0 10px;
+    }
+
+
+    #introduction ul li .icon-wrapper {
+        margin: 0 auto;  /* Center the icons */
+    }
+
+    #introduction ul li .icon-class {
+        width: 30px;  
+        height: 30px; 
+    }
+}
+
+@media (max-width: 420px) {
+    #introduction ul li a {
+        font-size: 1.3rem;
+        padding: 20px 0 0 0;
+    }
+}
+

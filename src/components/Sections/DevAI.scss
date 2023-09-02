@@ -1,0 +1,258 @@
+.DevAI {
+  .container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15rem;
+  }
+
+  .left-div {
+      display: flex;
+      width: 494px;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      align-self: stretch;
+      padding: 50px;
+      background-color: hsla(0, 0%, 100%, 0.5);
+      border-radius: 5%;
+
+      &:hover {
+        background-color: rgb(238, 238, 238);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+      }
+
+      .icon-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          align-self: stretch;
+      }
+
+      .left-icon, .right-icons {
+          display: flex;
+          width: 15px;
+          height: 15px;
+      }
+
+      .right-icons-container {
+          display: flex;
+          gap: 8px;
+      }
+
+      .icon-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          padding: 10px;
+
+          .icon-item {
+              width: 60px;
+              height: 60px;
+              flex-shrink: 0;
+          }
+      }
+  }
+
+  .right-div {
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 726px;
+      height: auto;
+      padding: 4rem;
+      gap: 0px;
+      border-radius: 5%;
+
+
+      p {
+          color: #FFF;
+          font-family: 'Source Code Pro', monospace;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          margin-top: 8px;
+          margin-bottom: 4px;
+          letter-spacing: 0.15em;
+          overflow: hidden;
+          border-right: 0.15em solid transparent;
+          white-space: nowrap;
+          animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+
+          &.typing {
+              border-right: 0.15em solid white;
+          }
+      }
+  }
+
+  @keyframes typing {
+      from {
+          width: 0;
+      }
+      to {
+          width: 100%;
+      }
+  }
+
+  @keyframes blink {
+      50% {
+          border-color: transparent;
+      }
+  }
+
+  @media (max-width:1000px){
+    .left-div{
+        gap: 20px;
+        .icon-list .icon-item {
+            width: 60px;
+            height: 60px;
+        }
+    } 
+  }
+
+  @media (max-width: 950px) {
+      .container {
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          justify-content: center; // Add this line
+      }
+
+      .left-div {
+          width: 90%;
+          padding: 2rem;
+          gap: 20px;
+          align-items: center;
+          justify-content: center; 
+
+          .icon-item {
+            width: 60px;
+            height: 60px;
+        }
+      }
+
+      .right-div {
+          padding: 2rem;
+
+          p {
+              font-size: 16px;
+              white-space: normal; // This will allow the text to wrap
+              animation: typing 3.5s steps(100, end), blink 0.75s step-end infinite; // Adjust steps accordingly
+          }
+      }
+  }
+
+  @media (max-width: 785px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        justify-content: center; // Add this line
+    }
+
+    .right-div {
+        width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+      .container {
+          gap: 12px;
+          margin-bottom: 3rem;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; // Add this line
+      }
+
+      .left-div {
+          width: 90%;
+          padding: 2rem;
+          gap: 20px;
+          align-items: center;
+          justify-content: center; 
+          
+          .icon-div {
+              align-items: center;
+              gap: 12px;
+          }
+
+          .icon-list {
+              justify-content: center;
+              gap: 4px;
+            
+              .icon-item {
+                width: 40px;
+                height: 40px;
+            }
+          }
+      }
+
+      .right-div {
+          padding: 1rem;
+          
+          
+          p {
+              font-size: 14px;
+              white-space: normal; // This will allow the text to wrap
+              animation: typing 3.5s steps(100, end), blink 0.75s step-end infinite; // Adjust steps accordingly
+          }
+      }
+  }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  .DevAI .icon-item:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+.right-div {
+    a {
+      color: white;        // Set text color to white
+      text-decoration: none;   // Remove default underline
+  
+      &:hover {
+        text-decoration: underline;   // Add underline on hover
+      }
+    }
+  }
+  
+  .right-div {
+    a {
+        
+        .hash-tag {
+            color: rgb(255, 77, 106);   // Style the #sth substrings in pink
+        }
+    }
+
+    p:last-child a {
+        color: grey;    // Style the text of the last line in grey
+    }
+}
+
+.scene-container {
+    flex: 1; /* take up all available space */
+    position: relative;
+    overflow: hidden;
+  }

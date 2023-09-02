@@ -1,0 +1,71 @@
+{
+  "name": "portfolio-site",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://wanyeung.github.io/wanyeungTech",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "gh-pages": "^6.0.0",
+    "matter-js": "^0.19.0",
+    "node-fetch": "^3.3.2",
+    "pathseg": "^1.2.1",
+    "pixi-live2d-display": "^0.4.0",
+    "pixi.js": "^7.2.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-particles": "^2.12.2",
+    "react-preloaders": "^3.0.3",
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-tsparticles": "^2.12.2",
+    "sass": "^1.66.0",
+    "teenyicons": "^0.4.1",
+    "tsparticles": "^2.12.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-slim": "^2.12.0",
+    "two.js": "^0.8.11",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}

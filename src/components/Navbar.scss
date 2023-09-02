@@ -1,0 +1,59 @@
+@import '../../src/App.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem 0rem 0rem;
+    background-color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* This ensures the navbar stays above other content */
+
+
+    @media (max-width: 300px) {  // Adjust breakpoint as needed
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  }
+  
+  .navbar-logo {
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 2rem;  // Spacing between the links
+
+    font-family: Righteous;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -4%;
+
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    @media (max-width: 500px) {
+      margin-top: -10%;
+    }
+
+    @media (max-width: 400px) {
+        display: none;
+      }
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: $primary-color; 
+    font-weight: bold;
+    transition: color 0.05s;
+  
+    &:hover {
+      color: $secondary-color; 
+    }
+  }
+  

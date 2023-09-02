@@ -1,0 +1,42 @@
+html{
+  font-size : 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Neucha',serif;
+}
+
+img{
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+
+  color: #000;
+  font-family: Neucha;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  background: #FFF;
+  overflow-x: hidden;
+  display : block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#loader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #faf488 url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
+	z-index: 999;
+}

@@ -1,0 +1,142 @@
+
+.fixed-bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+  .gif-container {
+    display: block;
+    flex: 0 0 200px;
+    transition: none; /* Disable transitions for mobile */
+
+    .resized-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }    
+  }
+
+  .content-container {
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    gap: 8px;
+
+    h2 {
+      color: #000;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    p {
+      color: #CCC;
+      font-size: 3.2rem;
+      line-height: 95%;
+      margin: 0;
+    }
+
+    .logos {
+      display: flex;
+      gap: 20px;
+  
+      a {
+        display: block;
+  
+        img {
+          max-width: 100%;
+          width: 24px;
+          height: 24px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+  
+@media (max-width: 450px) {
+
+
+  .fixed-bottom-section .content-container{
+    padding: 10px 10px;
+
+    h2 {
+      font-size: 0.8rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .fixed-bottom-section .gif-container{
+    flex: 0 0 100px;
+
+    .resized-image{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+  
+ 
+@media (max-width: 900px) {
+
+
+  .fixed-bottom-section .content-container{
+    padding: 20px 20px;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 2.8rem;
+    }
+  }
+
+  .fixed-bottom-section .gif-container{
+    flex: 0 0 100px;
+
+    .resized-image{
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+
+
+  .fixed-bottom-section .content-container{
+    padding: 10px 10px;
+
+    h2 {
+      font-size: 0.6rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .fixed-bottom-section .gif-container{
+    flex: 0 0 100px;
+
+    .resized-image{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

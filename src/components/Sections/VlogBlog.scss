@@ -1,0 +1,160 @@
+.VlogBlog {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  
+    .left-div {
+      flex: 2;  /* Adjusted this value */
+      padding: 0 1rem 1rem 0;
+
+      .posts {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 10%;
+        box-sizing: border-box;
+        border: 1px solid #D9D9D9;
+        background: rgba(255, 255, 255,0.2);
+        margin-bottom: 20px;
+        
+        transform: translateY(0);  /* Default state */
+        transition: background-color 0.3s, color 0.3s, border 0.3s, transform 0.3s; /* Add transform to the transition list */
+      }
+      
+      .posts:hover {
+        background-color: rgb(255, 255, 241);
+        color: #423E24;
+        border: 2px solid #A19F64;
+        transform: translateY(-5px);  /* Move up by 5 pixels */
+      }
+      
+      .posts h3 {
+        margin: 0;
+        font-size: 2.9rem;
+      }
+      
+      .posts p {
+        font-size: 1.4rem;
+      }
+      
+    }
+  
+    .right-div {
+      flex: 1;  /* Adjusted this value */
+      padding: 0 0 0.5rem 0;
+  
+      iframe {
+        display: block;
+        margin-bottom: 2rem;
+        border-radius: 10%;
+      }
+    }
+
+
+    @media (max-width: 900px) { // Tablet breakpoint
+      flex-direction: column;
+      width: 95%; // Allow a bit more width for tablets
+
+      .left-div {
+          width: 100%;
+          padding: 0;
+          
+          .posts {
+              margin-bottom: 15px;
+          }
+          
+          .posts h3 {
+              font-size: 2.5rem;
+          }
+          
+          .posts p {
+              font-size: 1.2rem;
+          }
+      }
+
+      .right-div {
+          width: 100%;
+
+          display: flex;  // Added flex
+          flex-wrap: wrap; // Allow the iframes to wrap to the next line if they don't fit
+          justify-content: space-between; // Space them evenly
+          width: 100%;
+
+          iframe {
+              width: calc(50% - 10px); // Set iframe width to take up half the space, minus some margin
+              margin-bottom: 1rem;
+              margin-right: 10px; // Add right margin for spacing between iframes
+          }
+
+          iframe:last-child {
+              margin-right: 0; // Remove right margin from the last iframe to align properly
+          }
+
+          iframe:hover {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        }
+      }
+  }
+
+  @media (max-width: 480px) { // Mobile breakpoint
+      width: 80%; // Utilize the full width for mobiles
+
+      .left-div {
+          .posts {
+              margin-bottom: 10px;
+          }
+
+          .posts h3 {
+              font-size: 1.9rem;
+          }
+          
+          .posts p {
+              font-size: 1rem;
+          }
+      }
+
+      .right-div iframe {
+          margin-bottom: 1rem;
+
+          display: flex;  // Added flex
+          flex-wrap: wrap; // Allow the iframes to wrap to the next line if they don't fit
+          justify-content: space-between; // Space them evenly
+          width: 100%;
+          padding: 0;
+
+          iframe {
+              width: calc(50% - 10px); // Set iframe width to take up half the space, minus some margin
+              margin-bottom: 1rem;
+              margin-right: 10px; // Add right margin for spacing between iframes
+          }
+
+          iframe:last-child {
+              margin-right: 0; // Remove right margin from the last iframe to align properly
+          }
+      }
+  }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+      transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+      transform: translate3d(4px, 0, 0);
+  }
+}
+
+.VlogBlog .right-div iframe:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+

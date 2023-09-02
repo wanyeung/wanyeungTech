@@ -1,0 +1,28 @@
+.scene {
+    width: 30vw;
+    height: 45vh;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 950px){
+      width: 100vw;
+      height: 45vh;
+    }
+
+    
+    @media (max-width: 780px){
+      width: 100vw;
+      height: 45vh;
+    }
+
+    @media (max-width: 480px){
+      width: 100vw;
+      height: 60vh;
+    }
+  }
+  
+
+canvas {
+    background-color: rgba(255, 255, 255,0) !important;
+}
+

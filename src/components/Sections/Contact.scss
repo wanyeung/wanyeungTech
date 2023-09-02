@@ -1,0 +1,134 @@
+.Contact {
+    text-align: center;
+    margin: 5rem 15rem 5rem 20rem;
+    padding: 40px;
+    border-radius: 10%;
+    border: 2px solid #D9D9D9;
+
+    background: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255,0)),
+        url('../../assets/heart.gif') no-repeat right bottom;
+
+    background-size: contain;
+    
+    // ... rest of your properties ...
+
+    &:hover {
+        background: 
+            linear-gradient(to right,  rgba(255, 253, 183, 0.5), rgba(255, 253, 183, 0.2)),
+            url('../../assets/heart.gif') no-repeat right bottom;
+
+        background-size: cover, contain;
+        border: 2px solid #d5d898;
+
+        p{
+            color: #656831;
+        }
+    }
+    p {
+        color: #CCC;
+        font-family: Neucha;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+  
+    .contact-links {
+      display: flex;
+      flex-direction: column; // Stack items vertically
+      align-items: right; // Center items horizontally
+      gap: 20px; // Space between the links
+  
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px; // Space between the icon and text
+
+        color: #000;
+        font-family: Neucha;
+        font-size: 44.259px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+  
+        img {
+          width: 40px; // Adjust as needed
+          height: 40px;
+        }
+  
+        &:hover {
+          color: gray; // Or any desired hover color
+        }
+
+        span {
+            font-size: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) { // For medium-sized devices like tablets
+      margin: 4rem 10rem 4rem 10rem;
+
+      p {
+          font-size: 36px;
+      }
+
+      .contact-links a {
+          font-size: 36px;
+
+        span {
+            font-size: 20px;
+        }
+      }
+
+      .contact-links img {
+          width: 30px;
+          height: 30px;
+      }
+
+  }
+
+  @media (max-width: 768px) { // For smaller tablets and large phones
+      margin: 3rem 5rem 3rem 5rem;
+
+      p {
+          font-size: 28px;
+      }
+
+      .contact-links a {
+          font-size: 28px;
+          margin: 0 10px; // Give a little space between links
+      }
+
+      .contact-links a img {
+          width: 25px;
+          height: 25px;
+      }
+  }
+
+  @media (max-width: 480px) { // For mobile devices
+      margin: 2rem 1rem 2rem 1rem;
+
+      p {
+          font-size: 24px;
+      }
+
+      .contact-links a {
+          font-size: 20px;
+          display: inline-block;
+          white-space: normal;
+          overflow-wrap: break-word;
+
+          span {
+            font-size: 15px;
+        }
+      }
+
+      .contact-links a img {
+          width: 20px;
+          height: 20px;
+      }
+  }
+  }
+  

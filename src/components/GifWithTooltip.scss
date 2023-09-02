@@ -1,0 +1,59 @@
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #A19F64;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    transform: translateY(-60rem);
+    font-size: 3.8rem;
+    color: #A19F64;
+}
+
+.tooltip-left {
+    right: 60%;
+}
+
+.tooltip-right {
+    left: 60%;
+}
+
+.my-gif {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    display: block;
+    margin-top: -8rem;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 968px) {
+    .tooltip {
+        font-size: 2rem;
+        transform: translateY(-60rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .tooltip {
+        font-size: 1rem;
+        transform: translateY(-50rem);
+    }
+}
+
+@media (max-width: 400px) {
+    .tooltip {
+        font-size: 1rem;
+        transform: translateY(-35rem);
+    }
+}
+
+@media (max-width: 300px) {
+    .tooltip {
+        font-size: 1rem;
+        transform: translateY(-20rem);
+    }
+}
+
