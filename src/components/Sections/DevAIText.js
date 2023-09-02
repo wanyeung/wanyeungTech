@@ -16,7 +16,7 @@ function DevAIText() {
         },
         {
             description: "Portfolio Site #React #Git #HTML,SCSS,JavaScript",
-            link: "https://github.com/wanyeung/wanuin-portfolio-v1"
+            link: "https://github.com/wanyeung/wanyeungTech"
         },
         {
             description: "Covid Virus Pattern Generator #Processing #Java",
