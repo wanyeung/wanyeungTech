@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wanyeungTech/static/css/main.1cf1db49.css",
+    "main.css": "/wanyeungTech/static/css/main.f584bd10.css",
     "main.js": "/wanyeungTech/static/js/main.652a7b63.js",
     "static/js/787.37faa4c4.chunk.js": "/wanyeungTech/static/js/787.37faa4c4.chunk.js",
     "static/media/quq_m09.gif": "/wanyeungTech/static/media/quq_m09.f09ac2eca62702e57bce.gif",
@@ -40,12 +40,12 @@
     "static/media/more-horizontal.svg": "/wanyeungTech/static/media/more-horizontal.07fb1892a14aecfca8636f7a2c82e7a4.svg",
     "static/media/info.svg": "/wanyeungTech/static/media/info.c199a089680e2335b9b959bd25c8a7c3.svg",
     "static/media/minus.svg": "/wanyeungTech/static/media/minus.e94ea9d27eac2308909ab8ee01a1f937.svg",
-    "main.1cf1db49.css.map": "/wanyeungTech/static/css/main.1cf1db49.css.map",
+    "main.f584bd10.css.map": "/wanyeungTech/static/css/main.f584bd10.css.map",
     "main.652a7b63.js.map": "/wanyeungTech/static/js/main.652a7b63.js.map",
     "787.37faa4c4.chunk.js.map": "/wanyeungTech/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cf1db49.css",
+    "static/css/main.f584bd10.css",
     "static/js/main.652a7b63.js"
   ]
 }
