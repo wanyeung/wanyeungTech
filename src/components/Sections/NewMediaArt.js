@@ -34,7 +34,7 @@ function NewMediaArt() {
       const vh = window.innerHeight / 100;
 
       while (newSquares.length < images.length) {
-        const size = Math.random() * (15 * vw) + (10 * vh);  // Using viewport units
+        const size = Math.random() * (10 * vw) + (5 * vh);  // Using viewport units
         const x = Math.random() * (window.innerWidth - (size / 1.5));
         const y = Math.random() * ((window.innerHeight / 2.2) - size + (20 * vh)) + (10); // Using viewport units
         const square = { x, y, size, url: images[newSquares.length] };
